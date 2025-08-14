@@ -162,9 +162,32 @@ plt.grid()
 plt.show()
 ```
 
-![Grafico](Imagenes/MELI.jpg)
+![Grafico](Imagenes/GRAFICO3.jpg)
 
-## Gif explicativo
+`CONCLUSIONES GENERALES:` Aunque se trata de tres empresas con actividades muy diferentes, las tres muestran comportamientos diferenciados, lo que refleja la naturaleza de sus industrias y los factores específicos que las afectan. Tesla destaca por su volatilidad, mientras que Apple y MercadoLibre presentan un crecimiento más uniforme, con influencia de eventos externos como las elecciones y las temporadas de consumo. En síntesis, los efectos de las elecciones presidenciales de 2016 fueron más significativos para empresas tecnológicas como Tesla, que se vieron impulsadas por las expectativas del mercado.
+
+10. **Se procede a efectuar una potencial predicción sobre TSLA en función de un período anterior definido:
+
+Se decidió basar el análisis predictivo en los 7 días posteriores a las elecciones, y se comprueba que la predicción fué atinada, puesto que Tesla incrementó su precio promedio y por lo tanto se alinea con la tendencia observada en los datos reales. Este comportamiento podría estar relacionado con un aumento en la confianza de los inversionistas hacia la compañía tras las elecciones.
+
+Para llevar adelante esa pequeña predicción se utilizaron las siguientes librerías:
+
+```
+import numpy as np # para hacer cálculos aritméticos
+print("importación de numpy exitosa")
+from sklearn.preprocessing import MinMaxScaler # importación de la clase MinMaxScaler de la libreria sklearn del módulo preprocessing
+print("importación de MinMaxScaler exitosa")
+
+#IMPORTACIONES PARA CREACIÓN DE RED NEURONAL
+from tensorflow.keras.models import Sequential
+print("importación de tensorflow.keras.models Sequential exitosa")
+from tensorflow.keras.layers import Dense, SimpleRNN, Reshape
+print("importación de tensorflow.keras.layers,etc. exitosa")
+```
+
+![Predicciones](Imagenes/GRAFICO3.jpg)
+
+## GIF EXPLICATIVO
 
 <p align="center">
   <img src="https://github.com/JessBasile/Python/blob/main/Imagenes/Python_github.gif?raw=true" width="700">
