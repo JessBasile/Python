@@ -3,7 +3,9 @@
 <img align="right" alt="Python" width="250" src="https://github.com/JessBasile/TuPrimeraPagina-Basile/raw/main/imagenes/python.gif">
 
 El presente proyecto se basa en la creación de una notebook en Google Colab, con un análisis de datos relacionados a las acciones de diferentes compañias con gráficos históricos sobre las cotizaciones en la bolsa de valores durante el período 2016-2017. Se elegió ese período dado fué una etapa electoral en EEUU, un momento clave para la economí y los mercados financieros. 
+
 Se icieron verificación de `splits` en los momentos de caídas abruptas para descartar una división de las acciones existentes, en varias nuevas para bajar el precio unitario sin cambiar el valor total que posee cada accionista. La consulta fué hecha en el sitio web `finance.yahoo`. Afortunadamnte, las empresas analizadas no tuvieron slipts dentro del lapso sometido análisis.
+
 Se deja a disposición video explicativo ([Link AQUÍ](https://view.genially.com/67ca73e4481e4913c9a91756)).
 
 1. **Instalación de Librería**
@@ -26,6 +28,7 @@ Se procede a importar los métodos necesarios
   ```
 
 4.  **Obtención de API_KEY**
+
 Se realiza a través del sitio web: https://www.alphavantage.co/
 
 6. **Se crea una lista de accciones**
