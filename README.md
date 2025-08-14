@@ -92,7 +92,7 @@ print(df_stocks["Stock"].value_counts())  # cantidad de filas por cada empresa
 | AMZN   | 503       |
 | GOOGL  | 503       |
 
-7. **Nueva Columna de cálculo promedio por acción**(entre precio open y close)
+7. **Nueva Columna de cálculo promedio por acción** (entre precio open y close)
 ```
 df_stocks["Promedio_Open_Close"] = (df_stocks["1. open"] + df_stocks["4. close"]) / 2 # creación de columna promedio
 df_stocks  # visualización de tabla con nueva columna del promedio
@@ -125,7 +125,11 @@ for accion in acciones_interes:
     plt.legend()
     plt.show()
 ```
+![Tesla](Imagenes/TSLA.jpg)
 
+![Apple](Imagenes/AAPL.jpg)
+
+![MercadoLibre](Imagenes/MELI.jpg)
 
 `CONCLUSIONES SOBRE LOS GRÁFICOS:` 
 
