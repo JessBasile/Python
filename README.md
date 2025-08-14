@@ -66,7 +66,78 @@ Luego se conecta con la key de alpha_vantage y posteriormente se realiza una con
 
 3018 rows × 6 columns
 
-6. **
+`CONCLUSIONES SOBRE JUSTIFICACIÓN DEL PERÍODO DE ANÁLISIS:` Inicialmente, se contempló analizar el período que comprende el ataque a las Torres Gemelas (2001) debido al impacto significativo que este evento tuvo en los mercados financieros. Sin embargo, descubrí que algunas de las empresas del listado solicitado para este trabajo final no cotizaban públicamente en esa época, lo que dificultaba llevar a cabo un análisis integral y representativo.
+
+Posteriormente, se consideró el período pandémico, pero fué descartado ya que se trata de un tema ampliamente estudiado y podría carecer de originalidad en el contexto de este análisis.
+
+Finalmente, opté por centrar el estudio en el impacto de las elecciones presidenciales de EEUU durante el período 2016-2017, un marco temporal en el que todas las empresas involucradas ya cotizaban en bolsa. Este enfoque permite explorar como un evento político significativo puede influir en las dinámicas del mercado y en las empresas seleccionadas.
+
+Estas elecciones resultaron particularmente relevantes debido a que la oposición (representada por Donald Trump) tenía una ideología radicalmente diferente a la de Obama. Este tipo de transiciones ideológicas suele generar incertidumbre y volatilidad en los mercados bursátiles, ya que los inversores tienden a ajustar sus expectativas y estrategias en función de los posibles cambios en políticas económicas, fiscales o regulatorias.
+
+6. **Consulta para corroborar información**
+
+Como el listado anterior solo muestra 2 empresas (MELI & GOOGL) se realiza la siguiente consulta para corroborar la presencialidad de la totalidad de compañias en el análisis
+```
+print(df_stocks["Stock"].unique())  # muestra los simbolos de todas las empresas
+print(len(df_stocks["Stock"].unique()))  # muestra el total de empresas
+print(df_stocks["Stock"].value_counts())  # cantidad de filas por cada empresa
+```
+`MELI`, `TSLA`, `AAPL`, `MSFT`, `AMZN` y `GOOGL`.
+| Ticker | Registros |
+|--------|-----------|
+| MELI   | 503       |
+| TSLA   | 503       |
+| AAPL   | 503       |
+| MSFT   | 503       |
+| AMZN   | 503       |
+| GOOGL  | 503       |
+
+7. **Nueva Columna de cálculo promedio por acción**(entre precio open y close)
+```
+df_stocks["Promedio_Open_Close"] = (df_stocks["1. open"] + df_stocks["4. close"]) / 2 # creación de columna promedio
+df_stocks  # visualización de tabla con nueva columna del promedio
+```
+| date       | open     | high     | low      | close    | volume     | Stock | Promedio_Open_Close |
+|------------|----------|----------|----------|----------|------------|-------|---------------------|
+| 2016-01-04 | 112.36   | 112.840  | 108.145  | 109.95   | 535284.0   | MELI  | 111.155             |
+| 2016-01-05 | 110.51   | 112.355  | 108.600  | 109.68   | 432668.0   | MELI  | 110.095             |
+| 2016-01-06 | 107.98   | 108.980  | 106.110  | 107.33   | 579179.0   | MELI  | 107.655             |
+| 2016-01-07 | 104.97   | 106.200  | 101.630  | 102.93   | 475036.0   | MELI  | 103.950             |
+| 2016-01-08 | 104.39   | 104.880  | 100.860  | 101.09   | 443968.0   | MELI  | 102.740             |
+| ...        | ...      | ...      | ...      | ...      | ...        | ...   | ...                 |
+| 2017-12-22 | 1070.00  | 1071.720 | 1067.640 | 1068.86  | 860800.0   | GOOGL | 1069.430            |
+| 2017-12-26 | 1068.64  | 1068.860 | 1058.640 | 1065.85  | 914574.0   | GOOGL | 1067.245            |
+| 2017-12-27 | 1066.60  | 1068.270 | 1058.380 | 1060.20  | 1027634.0  | GOOGL | 1063.400            |
+| 2017-12-28 | 1062.25  | 1064.840 | 1053.380 | 1055.95  | 982285.0   | GOOGL | 1059.100            |
+| 2017-12-29 | 1055.49  | 1058.050 | 1052.700 | 1053.40  | 1156357.0  | GOOGL | 1054.445            |
+
+8. **Graficos sobre 3 acciones de interés por separado** (TSLA, AAPL y MELI)
+```
+acciones_interes = ["TSLA", "AAPL", "MELI"]  # lista de acciones elegidas para graficar
+
+# Gráficos individuales para cada acción
+for accion in acciones_interes:
+    df_accion = df_stocks[df_stocks["Stock"] == accion]  # Filtrar por acción
+    df_accion["Promedio_Open_Close"].plot(label=accion)  # Graficar el promedio por acción
+    plt.title(f"Historial de precio promedio Open y Close para {accion}")
+    plt.xlabel("Fecha")
+    plt.ylabel("Promedio Open-Close (USD)")
+    plt.legend()
+    plt.show()
+```
+
+
+`CONCLUSIONES SOBRE LOS GRÁFICOS:` 
+
+Se llevó a cabo un análisis de splits para verificar si las caídas en los precios de las acciones observadas en los gráficos eran consecuencia de estos eventos. Los resultados mostraron que Apple no realizó splits en el período analizado (sino el 28/02/2005 Split de 2:1, 09/06/2014 Split de 7:1 y 31/08/2020 Split de 4:1). En el caso de Tesla, tampoco se produjeron splits dentro del período analizado (sino el 31/08/2020 Split de 5:1 y 25/08/2022 Split de 3:1).
+
+Sorprendentemente MercadoLibre JAMÁS hizo splits a la fecha. Esto indica que las caídas observadas en los gráficos no están relacionadas con splits y podrían deberse a otras causas del mercado.
+
+Tesla refleja un crecimiento acelerado que evidencia las expectativas del mercado por su innovación en el sector automotriz eléctrico. Pre-elecciones (a inicios del 2016) sufre una caída importante en el precio promedio, pero luego de las elecciones mejora muchísimo su cotización.
+
+Apple presenta un crecimiento más estable y progresivo, con una pendiente positiva constante en el tiempo. Esto podría vincularse al prestigio líder en tecnología, respaldada por lanzamientos consistentes y una base de clientes fidelizada. En consecuencia, no se observan comportamientos bruscos en el mercado producto de las elecciones, sino más bien a épocas festivas como navidad, año nuevo, etc.
+
+MercadoLibre muestra un incremento constante y sostenido pero no tan progresivo como Apple. Previo a las elecciones se observa una caída, aunque mantiene una tendencia positiva y luego refuerza su crecimiento.
 
 ## Gif explicativo
 
