@@ -143,6 +143,27 @@ Apple presenta un crecimiento más estable y progresivo, con una pendiente posit
 
 MercadoLibre muestra un incremento constante y sostenido pero no tan progresivo como Apple. Previo a las elecciones se observa una caída, aunque mantiene una tendencia positiva y luego refuerza su crecimiento.
 
+9. **Grafio de las 3 acciones juntas en el mismo gráfico:** (beneficia la comparación)
+```
+acciones_interes = ["TSLA", "AAPL", "MELI"]
+
+# Crear gráfico combinado
+plt.figure(figsize=(12, 6))
+for accion in acciones_interes:
+    df_accion = df_stocks[df_stocks["Stock"] == accion]  # Filtrar por acción
+    plt.plot(df_accion.index, df_accion["Promedio_Open_Close"], label=accion)  # Graficar promedio
+
+# Configuración del gráfico
+plt.title("Comparación de promedio Open-Close para 3 acciones")
+plt.xlabel("Fecha")
+plt.ylabel("Promedio Open-Close (USD)")
+plt.legend(title="Acciones")
+plt.grid()
+plt.show()
+```
+
+![Grafico](Imagenes/MELI.jpg)
+
 ## Gif explicativo
 
 <p align="center">
