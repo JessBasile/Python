@@ -50,7 +50,7 @@ fecha_fin = "2017-12-31"
 ```
 Luego se conecta con la key de alpha_vantage y posteriormente se realiza una conversión del indice del dataframe de formato data a datatime, se ordena el índice en orden cronológico, se aplica un filtro por fechas, se concatena los datos en df_stocks y se procede a la visualización de la tabla:
 
-	| date       | open    | high     | low      | close   | volume     | Stock |
+| date       | open    | high     | low      | close   | volume     | Stock |
 |------------|---------|----------|----------|---------|------------|-------|
 | 2016-01-04 | 112.36  | 112.840  | 108.145  | 109.95  | 535284.0   | MELI  |
 | 2016-01-05 | 110.51  | 112.355  | 108.600  | 109.68  | 432668.0   | MELI  |
