@@ -9,5 +9,7 @@ BLA BLA BLA BLA
 
 1. **Video explicativo:**
 
-<img align="right" alt="gif_python" src="https://github.com/JessBasile/Python/blob/main/Imagenes/Python_github.gif?raw=true">
+<p align="center">
+  <img src="https://github.com/JessBasile/Python/blob/main/Imagenes/Python_github.gif?raw=true" width="700">
+</p>
 
