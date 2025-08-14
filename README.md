@@ -185,7 +185,7 @@ from tensorflow.keras.layers import Dense, SimpleRNN, Reshape
 print("importación de tensorflow.keras.layers,etc. exitosa")
 ```
 
-![Predicciones](Imagenes/GRAFICO3.jpg)
+![Predicciones](Imagenes/Prediccion.jpg)
 
 ## GIF EXPLICATIVO
 
