@@ -6,3 +6,5 @@ El presente proyecto se basa en la creación de una notebook en Google Colab, co
 
 1. **Video explicativo:**
 
+<img align="right" alt="gif_python" src="https://github.com/JessBasile/Python/blob/main/imagenes/Python_github.gif?raw=true">
+
