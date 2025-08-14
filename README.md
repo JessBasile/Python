@@ -193,3 +193,7 @@ print("importación de tensorflow.keras.layers,etc. exitosa")
   <img src="https://github.com/JessBasile/Python/blob/main/Imagenes/Python_github.gif?raw=true" width="700">
 </p>
 
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=JessBasile&show_icons=true&hide_title=true&hide=issues,prs,contribs&theme=blueberry" alt="GitHub Stats">
+</p>
