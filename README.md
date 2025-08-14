@@ -194,6 +194,5 @@ print("importación de tensorflow.keras.layers,etc. exitosa")
 </p>
 
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JessBasile&show_icons=true&hide_title=true&hide=issues,prs,contribs&theme=blueberry" alt="GitHub Stats">
-</p>
+___
+<h2 align="center">¡Muchas gracias por su visita! <img src="https://github.com/ABSphreak/ABSphreak/blob/master/gifs/Hi.gif" width="30px"></h2>
