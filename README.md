@@ -9,6 +9,7 @@ Se icieron verificación de `splits` en los momentos de caídas abruptas para de
 Se deja a disposición video explicativo ([Link AQUÍ](https://view.genially.com/67ca73e4481e4913c9a91756)).
 
 1. **Instalación de Librería**
+
 `alpha_vantage` = para acceder a datos financieros y económicos en tiempo real o históricos a través de la API de Alpha Vantage
    ```
    !pip install alpha_vantage
@@ -39,7 +40,7 @@ Se realiza a través del sitio web: https://www.alphavantage.co/
   ```
 
 
-***Gif explicativo***
+## Gif explicativo
 
 <p align="center">
   <img src="https://github.com/JessBasile/Python/blob/main/Imagenes/Python_github.gif?raw=true" width="700">
