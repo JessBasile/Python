@@ -166,7 +166,7 @@ plt.show()
 
 `CONCLUSIONES GENERALES:` Aunque se trata de tres empresas con actividades muy diferentes, las tres muestran comportamientos diferenciados, lo que refleja la naturaleza de sus industrias y los factores específicos que las afectan. Tesla destaca por su volatilidad, mientras que Apple y MercadoLibre presentan un crecimiento más uniforme, con influencia de eventos externos como las elecciones y las temporadas de consumo. En síntesis, los efectos de las elecciones presidenciales de 2016 fueron más significativos para empresas tecnológicas como Tesla, que se vieron impulsadas por las expectativas del mercado.
 
-10. **Se procede a efectuar una potencial predicción sobre TSLA en función de un período anterior definido:
+10. **Se procede a efectuar una potencial predicción sobre TSLA en función de un período anterior definido:**
 
 Se decidió basar el análisis predictivo en los 7 días posteriores a las elecciones, y se comprueba que la predicción fué atinada, puesto que Tesla incrementó su precio promedio y por lo tanto se alinea con la tendencia observada en los datos reales. Este comportamiento podría estar relacionado con un aumento en la confianza de los inversionistas hacia la compañía tras las elecciones.
 
